@@ -10,7 +10,8 @@ export class AppComponent {
   a = 3;
   b = 5;
   ready = false;
-  name = '';
+  name:String = '';
+  surname = '';
 
   constructor(){
     setTimeout(() => {

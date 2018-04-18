@@ -16,4 +16,8 @@ export class AppComponent {
       this.ready = true;
     }, 3000)
   }
+
+  sthHappens(){
+    alert('Doing sth!');
+  }
 }

@@ -9,4 +9,11 @@ export class AppComponent {
   title = 'PlatziSquare';
   a = 3;
   b = 5;
+  ready = false;
+
+  constructor(){
+    setTimeout(() => {
+      this.ready = true;
+    }, 3000)
+  }
 }

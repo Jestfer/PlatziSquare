@@ -10,13 +10,13 @@ export class AppComponent {
   a = 3;
   b = 5;
   ready = false;
+  name = '';
 
   constructor(){
     setTimeout(() => {
       this.ready = true;
     }, 3000)
   }
-
   sthHappens(){
     alert('Doing sth!');
   }

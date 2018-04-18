@@ -6,19 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PlatziSquare';
-  a = 3;
-  b = 5;
-  ready = false;
-  name:String = '';
-  surname = '';
+  title = 'PlatziSquare'
+  places:any = [
+    { name: 'Ricos Tacos'},
+    { name: 'Misty Flower'},
+    { name: 'Roast and Toast'}
+  ]
 
   constructor(){
-    setTimeout(() => {
-      this.ready = true;
-    }, 3000)
-  }
-  sthHappens(){
-    alert('Doing sth!');
+
   }
 }

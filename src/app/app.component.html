@@ -1,26 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-
-  <!-- String Interpolation -->
-  <h2>
-    {{ a + b }}
-  </h2>
-
-  <hr>
-
-  <!-- Property Binding + Event Binding -->
-  <button [disabled]="!ready" (click)="sthHappens()">Click!</button>
-
-  <hr>
-
-  <!-- Two Way Data Binding -->
-  <input type="text" placeholder="Your name" [(ngModel)]="name">
-  <input type="text" placeholder="Your surname" [(ngModel)]="surname">
-  <br>
-  My name is {{ name }} {{ surname }}
-
-</div>
+<ul>
+  <li *ngFor="let place of places">{{ place.name }}</li>
+</ul>
 

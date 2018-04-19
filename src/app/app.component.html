@@ -10,11 +10,9 @@
   </ng-container>
 </ul>
 
-<hr>
-
 <ul>
-  <ng-container *ngFor="let person of people">
-    <li *ngIf="person.age > 17">{{ person.name }}</li>
+  <ng-container *ngFor="let place of places; let i = index">
+    <li [ngStyle]="{ color: (place.active) ? 'black' : 'grey' }" [ngClass]="{ 'even-num': (i + 1) % 2 !== 0 }">{{ place.name }}</li>
   </ng-container>
 </ul>
 

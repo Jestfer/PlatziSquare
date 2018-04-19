@@ -17,11 +17,6 @@ export class AppComponent {
   ]
   lat:number = 51.5173403
   lng:number = -0.0754695
-  people:any = [
-    { name: 'Kevin', age: 17 },
-    { name: 'Asensio', age: 20 },
-    { name: 'CR7', age: 33 }
-  ]
 
   constructor(){
 

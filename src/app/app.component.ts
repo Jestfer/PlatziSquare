@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'PlatziSquare'
   places:any = [
-    { name: 'Ricos Tacos'},
-    { name: 'Misty Flower'},
-    { name: 'Roast and Toast'}
+    { active: true, name: 'Misty Flower'},
+    { active: false, name: 'Ricos Tacos'},
+    { active: true, name: 'Ritz Hotel'},
+    { active: true, name: 'Roast and Toast'},
+    { active: true, name: 'La Habana'}
   ]
 
   constructor(){

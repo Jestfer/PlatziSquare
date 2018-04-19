@@ -1,3 +1,9 @@
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+<hr>
+
 <ul>
   <ng-container *ngFor="let place of places">
     <li *ngIf="place.active">{{ place.name }}</li>

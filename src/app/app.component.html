@@ -10,3 +10,11 @@
   </ng-container>
 </ul>
 
+<hr>
+
+<ul>
+  <ng-container *ngFor="let person of people">
+    <li *ngIf="person.age > 17">{{ person.name }}</li>
+  </ng-container>
+</ul>
+

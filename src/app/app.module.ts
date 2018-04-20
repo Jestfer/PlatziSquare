@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
-import { HighlightDirective } from './directives/highlight.directive';
 
-import { environment } from '../environments/environment';
+import { HighlightDirective } from './directives/highlight.directive';
+import { CountClicksDirective } from './directives/count-clicks.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    CountClicksDirective
   ],
   imports: [
     BrowserModule,

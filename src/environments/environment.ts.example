@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiAGM: 'AIzaSyAIF1d13P6BKJwjql7hiYJvtecR_iH6zIE'
+  apiAGM: 'YOUR_KEY'
 };

@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 import { HighlightDirective } from './directives/highlight.directive';
 
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     HttpModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_KEY'
+      apiKey: environment.apiAGM
     })
   ],
   providers: [],

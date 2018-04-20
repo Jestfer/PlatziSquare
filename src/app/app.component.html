@@ -12,7 +12,7 @@
 
 <ul>
   <ng-container *ngFor="let place of places; let i = index" [ngSwitch]="place.proximity">
-    <a count-clicks><li [ngStyle]="{ color: (place.active) ? 'black' : 'grey' }"
+    <a><li count-clicks [ngStyle]="{ color: (place.active) ? 'black' : 'grey' }"
         [ngClass]="{ 'even-num': (i + 1) % 2 !== 0 }"
         [highlight]="place.plan">
         {{ place.name }} -

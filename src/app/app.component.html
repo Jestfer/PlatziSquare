@@ -11,8 +11,12 @@
 </ul>
 
 <ul>
-  <ng-container *ngFor="let place of places; let i = index">
-    <li [ngStyle]="{ color: (place.active) ? 'black' : 'grey' }" [ngClass]="{ 'even-num': (i + 1) % 2 !== 0 }">{{ place.name }}</li>
+  <ng-container *ngFor="let place of places; let i = index" [ngSwitch]="place.proximity">
+    <li [ngStyle]="{ color: (place.active) ? 'black' : 'grey' }"
+        [ngClass]="{ 'even-num': (i + 1) % 2 !== 0 }">{{ place.name }} -
+        <span *ngSwitchCase="1" [ngStyle]="{ color: 'green' }">Really close</span>
+        <span *ngSwitchCase="2" [ngStyle]="{ color: 'brown' }">Close</span>
+        <span *ngSwitchCase="3" [ngStyle]="{ color: 'red' }">Far</span>
+    </li>
   </ng-container>
 </ul>
-

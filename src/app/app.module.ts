@@ -11,6 +11,13 @@ import { AgmCoreModule } from '@agm/core';
 import { HighlightDirective } from './directives/highlight.directive';
 import { CountClicksDirective } from './directives/count-clicks.directive';
 
+import { Routes } from "@angular/router";
+
+const appRoutes: Routes = [
+  { path: '', component: AppComponent },
+  { path: 'places', component: AppComponent }
+]
+
 @NgModule({
   declarations: [
     AppComponent,

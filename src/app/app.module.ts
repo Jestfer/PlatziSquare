@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DetailComponent } from './detail/detail.component';
 import { PlacesComponent } from './places/places.component';
+import { ContactComponent } from './contact/contact.component';
 import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
@@ -18,6 +19,7 @@ import { Routes, RouterModule } from "@angular/router";
 const appRoutes: Routes = [
   { path: '', component: PlacesComponent },
   { path: 'places', component: PlacesComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'detail/:id', component: DetailComponent }
 ]
 
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     HighlightDirective,
     CountClicksDirective,
     DetailComponent,
-    PlacesComponent
+    PlacesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,11 @@
-<div class="card card-body bg-light">
-  <a routerLink="/places">Places</a> / {{ place.name }}
-</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/places">Places</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{{ place.name }}</li>
+  </ol>
+</nav>
 
 <div class="container">
   <h1>{{ place.name }}</h1>

@@ -10,7 +10,7 @@
       <h2>Nearby Places</h2>
       <ul class="list-group">
         <ng-container *ngFor="let place of places">
-          <a routerLink="/detail/{{ place.id }}">
+          <a routerLink="/detail/{{ place.id }}" [queryParams]="{ action: 'view' }">
             <li class="list-group-item" *ngIf="place.active">{{ place.name }}</li>
           </a>
         </ng-container>

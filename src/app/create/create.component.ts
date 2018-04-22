@@ -11,9 +11,18 @@ export class CreateComponent {
   }
 
   savePlace(){
-    this.place.id = Date.now()
-    this.placesService.savePlace(this.place)
-    alert('Business saved successfully!')
-    this.place = {}
+    let address = this.place.street + ',' + this.place.town + ',' + this.place.country
+    // We pass the address info to the service to connect to Firebase
+    this.placesService.getGeoData(address) // => returns a promise! 'We subscribe to the Promise'
+      // .valueChanges().subscribe(result => {
+      .subscribe(result => {
+        this.place.lat = result.json().results[0].geometry.location.lat
+        this.place.lng = result.json().results[0].geometry.location.lng
+
+        this.place.id = Date.now()
+        this.placesService.savePlace(this.place)
+        alert('Business saved successfully!')
+        this.place = {}
+      })
   }
 }

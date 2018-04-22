@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './contact.component.html'
 })
 export class ContactComponent {
+  lat: number = 51.5169998
+  lng: number = -0.075566
 }

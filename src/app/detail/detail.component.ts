@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent {
   places: any = [
-    { id: 1, plan: 'Premium', active: true, name: 'Makers Academy', description: 'Coming soon', proximity: 1, distance: 0 },
+    { id: 1, plan: 'Premium', active: true, name: 'Makers Academy', description: 'Coming soon', proximity: 1, distance: 0.5 },
     { id: 2, plan: 'Premium', active: true, name: 'Roast and Toast', description: 'Coming soon', proximity: 1, distance: 0.5 },
     { id: 3, plan: 'Free', active: true, name: 'Misty Flower', description: 'Coming soon', proximity: 2, distance: 1 },
     { id: 4, plan: 'Free', active: false, name: 'Ricos Tacos', description: 'Coming soon', proximity: 2, distance: 2 },

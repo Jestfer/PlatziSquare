@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class PlacesComponent {
   title = 'PlatziSquare'
   places: any = [
-    { id: 1, plan: 'premium', active: true, name: 'Makers Academy', proximity: 1, distance: 0 },
+    { id: 1, plan: 'premium', active: true, name: 'Makers Academy', proximity: 1, distance: 0.5 },
     { id: 2, plan: 'premium', active: true, name: 'Roast and Toast', proximity: 1, distance: 0.5 },
     { id: 3, plan: 'free', active: true, name: 'Misty Flower', proximity: 2, distance: 1 },
     { id: 4, plan: 'free', active: false, name: 'Ricos Tacos', proximity: 2, distance: 2 },

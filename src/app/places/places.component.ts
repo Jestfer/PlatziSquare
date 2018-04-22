@@ -12,6 +12,9 @@ export class PlacesComponent {
   places = null
 
   constructor(private placesService: PlacesService) {
-    this.places = placesService.getPlaces()
+    placesService.getPlaces()
+      .valueChanges().subscribe(places => {
+        this.places = places
+      })
   }
 }

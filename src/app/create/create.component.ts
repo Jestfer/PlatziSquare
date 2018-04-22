@@ -11,6 +11,9 @@ export class CreateComponent {
   }
 
   savePlace(){
+    this.place.id = Date.now()
     this.placesService.savePlace(this.place)
+    alert('Business saved successfully!')
+    this.place = {}
   }
 }

@@ -16,12 +16,12 @@ export class PlacesService {
   }
 
   public getPlaces() {
-    return this.places
+    return this.afDB.list('places/')
   }
   public findPlace(id) {
     return this.places.find((place) => { return place.id == id }) || null
   }
   public savePlace(place){
-    this.afDB.database.ref('places/1').set(place)
+    this.afDB.database.ref('places/' + place.id).set(place)
   }
 }

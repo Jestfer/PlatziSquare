@@ -8,6 +8,7 @@
   <div class="row">
     <div class="col-md-8">
       <h2>Nearby Places</h2>
+      <a class="btn btn-primary" routerLink="/create">Add Business</a>
       <ul class="list-group">
         <ng-container *ngFor="let place of places">
           <a routerLink="/detail/{{ place.id }}" [queryParams]="{ action: 'view' }">

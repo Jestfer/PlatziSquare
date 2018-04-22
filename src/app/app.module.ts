@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DetailComponent } from './detail/detail.component';
 import { PlacesComponent } from './places/places.component';
 import { ContactComponent } from './contact/contact.component';
+import { CreateComponent } from './create/create.component';
 import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   { path: '', component: PlacesComponent },
   { path: 'places', component: PlacesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'create', component: CreateComponent },
   { path: 'detail/:id', component: DetailComponent }
 ]
 
@@ -43,7 +45,8 @@ export const firebaseConfig = {
     CountClicksDirective,
     DetailComponent,
     PlacesComponent,
-    ContactComponent
+    ContactComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

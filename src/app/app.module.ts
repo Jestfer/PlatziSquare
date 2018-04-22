@@ -15,6 +15,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { CountClicksDirective } from './directives/count-clicks.directive';
 
 import { Routes, RouterModule } from "@angular/router";
+import { PlacesService } from './services/places.service';
 
 const appRoutes: Routes = [
   { path: '', component: PlacesComponent },
@@ -41,7 +42,7 @@ const appRoutes: Routes = [
     }),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [PlacesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

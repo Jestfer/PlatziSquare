@@ -5,5 +5,13 @@
 
 export const environment = {
   production: false,
-  apiAGM: 'YOUR_KEY'
+  apiAGM: 'YOUR_KEY',
+
+  firebaseConfig: {
+    apiKey: "xxxxxxxxxx",
+    authDomain: "your-domain-name.firebaseapp.com",
+    databaseURL: "https://your-domain-name.firebaseio.com",
+    storageBucket: "your-domain-name.appspot.com",
+    messagingSenderId: '<your-messaging-sender-id>'
+  }
 };

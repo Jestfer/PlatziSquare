@@ -1,0 +1,54 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/places">Places</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{{ place.name }}</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <label>Name</label>
+      <input type="text" class="form-control" [(ngModel)]="place.name">
+      <br>
+
+      <label>Distance</label>
+      <input type="number" class="form-control" [(ngModel)]="place.distance">
+      <br>
+
+      <label>Proximity</label>
+      <input type="number" class="form-control" [(ngModel)]="place.proximity">
+      <br>
+
+      <label>Description</label>
+      <textarea class="form-control" [(ngModel)]="place.description"></textarea>
+      <br>
+
+      <label>Plan</label>
+      <input type="text" class="form-control" [(ngModel)]="place.plan">
+      <br>
+
+      <h3>Address</h3>
+      <br>
+      
+      <label>Street and Number</label>
+      <input type="text" class="form-control" [(ngModel)]="place.street">
+      <br>
+
+      <label>Town</label>
+      <input type="text" class="form-control" [(ngModel)]="place.town">
+      <br>
+
+      <label>Country</label>
+      <input type="text" class="form-control" [(ngModel)]="place.country">
+      <br>
+
+      <hr>
+
+      <button type="button" class="btn btn-primary" (click)="savePlace()">Submit</button>
+      <a routerLink="/places"><button type="button" class="btn btn-secondary">Cancel</button></a>
+    </div>
+  </div>
+</div>

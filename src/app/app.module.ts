@@ -8,6 +8,7 @@ import { DetailComponent } from './detail/detail.component';
 import { PlacesComponent } from './places/places.component';
 import { ContactComponent } from './contact/contact.component';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
   { path: 'places', component: PlacesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'create', component: CreateComponent },
-  { path: 'detail/:id', component: DetailComponent }
+  { path: 'detail/:id', component: DetailComponent },
+  { path: 'edit/:id', component: EditComponent }
 ]
 
 export const firebaseConfig = {
@@ -46,7 +48,8 @@ export const firebaseConfig = {
     DetailComponent,
     PlacesComponent,
     ContactComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

@@ -12,10 +12,10 @@
       <ul class="list-group">
         <ng-container *ngFor="let place of places">
           <li class="list-group-item">
-            <a routerLink="/detail/{{ place.id }}" [queryParams]="{ action: 'view' }">
+            <a routerLink="/detail/{{ place.id }}">
               {{ place.name }}
             </a>
-            <a routerLink="/edit/{{ place.id }}" [queryParams]="{ action: 'edit' }">
+            <a routerLink="/edit/{{ place.id }}">
               <button type="button" class="btn btn-secondary edit">Edit</button>
             </a>
           </li>

@@ -10,9 +10,6 @@ export class DetailComponent {
   id = null
   place:any = {}
   constructor(private route: ActivatedRoute, private placesService: PlacesService){
-    console.log(this.route.snapshot.params['id'])
-    console.log(this.route.snapshot.queryParams['action'])
-
     this.id = this.route.snapshot.params['id']
     this.place = this.placesService.findPlace(this.id)
       .valueChanges().subscribe(place => {

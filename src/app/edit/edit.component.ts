@@ -9,6 +9,7 @@ import { PlacesService } from '../services/places.service';
 export class EditComponent {
   id = null
   place:any = {}
+  done = false
 
   constructor(private route: ActivatedRoute, private placesService: PlacesService){
     this.id = this.route.snapshot.params['id']
@@ -26,11 +27,11 @@ export class EditComponent {
 
     this.placesService.getGeoData(address)
       .subscribe(result => {
+        this.done = true
         this.place.lat = result.json().results[0].geometry.location.lat
         this.place.lng = result.json().results[0].geometry.location.lng
 
         this.placesService.savePlace(this.place)
-        alert('Business updated successfully!')
       })
   }
 }

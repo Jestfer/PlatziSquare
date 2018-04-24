@@ -17,4 +17,20 @@ export class EditComponent {
         this.place = place;
       });
   }
+
+  // Esta función es como savePlace, pero sin modificar el ID
+  // Quizá debería ir en el places.service ... Pero no veo mucha diferencia
+  // porque reutilizamos los métodos ya existentes, con pequeñas modificaciones
+  updatePlace(){
+    let address = this.place.street + ',' + this.place.town + ',' + this.place.country
+
+    this.placesService.getGeoData(address)
+      .subscribe(result => {
+        this.place.lat = result.json().results[0].geometry.location.lat
+        this.place.lng = result.json().results[0].geometry.location.lng
+
+        this.placesService.savePlace(this.place)
+        alert('Business updated successfully!')
+      })
+  }
 }

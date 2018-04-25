@@ -11,3 +11,9 @@ agm-map {
 .edit {
   margin-left: 1em;
 }
+
+#square {
+  width: 200px;
+  height: 200px;
+  background-color: aliceblue;
+}

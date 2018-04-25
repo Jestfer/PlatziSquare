@@ -13,6 +13,7 @@ import { LinkifystrPipe } from './pipes/linkifystr.pipe';
 import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HighlightDirective } from './directives/highlight.directive';
 import { CountClicksDirective } from './directives/count-clicks.directive';
@@ -55,6 +56,7 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     FormsModule,
     AgmCoreModule.forRoot({

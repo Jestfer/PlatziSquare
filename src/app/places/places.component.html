@@ -13,7 +13,7 @@
         <ng-container *ngFor="let place of places">
           <li class="list-group-item">
             <a routerLink="/detail/{{ place.id }}">
-              {{ place.name }}
+              {{ place.name | lowercase }}
             </a>
             <a routerLink="/edit/{{ place.id }}">
               <button type="button" class="btn btn-secondary edit">Edit</button>

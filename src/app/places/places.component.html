@@ -13,13 +13,17 @@
         <ng-container *ngFor="let place of places">
           <li class="list-group-item">
             <a routerLink="/detail/{{ place.id }}">
-              {{ place.name | titlecase }}
-              <br>
-              <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
+              <h3>{{ place.name | titlecase }}</h3>
             </a>
+
+            <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
+
             <a routerLink="/edit/{{ place.id }}">
               <button type="button" class="btn btn-secondary edit">Edit</button>
             </a>
+
+            <br>
+            <p [innerHtml]="place.description | linkifystr"></p>
           </li>
         </ng-container>
       </ul>

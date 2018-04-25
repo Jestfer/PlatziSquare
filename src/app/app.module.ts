@@ -9,6 +9,7 @@ import { PlacesComponent } from './places/places.component';
 import { ContactComponent } from './contact/contact.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { LinkifystrPipe } from './pipes/linkifystr.pipe';
 import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
@@ -49,7 +50,8 @@ export const firebaseConfig = {
     PlacesComponent,
     ContactComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    LinkifystrPipe
   ],
   imports: [
     BrowserModule,

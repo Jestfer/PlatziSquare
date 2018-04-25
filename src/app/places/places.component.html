@@ -15,7 +15,7 @@
             <a routerLink="/detail/{{ place.id }}">
               {{ place.name | titlecase }}
               <br>
-              <small>Created: {{ place.id | date }}</small>
+              <small>Created: {{ place.id | date | uppercase }}</small>
             </a>
             <a routerLink="/edit/{{ place.id }}">
               <button type="button" class="btn btn-secondary edit">Edit</button>

@@ -7,17 +7,13 @@ import { PlacesService } from '../services/places.service';
   animations: [
     trigger('animatedContainer', [
       state('initial', style({
-        opacity: 0,
-        backgroundColor: 'green',
-        transform: 'rotate3d(0, 0, 0, 0deg)'
+        opacity: 0
       })),
       state('final', style({
-        opacity: 1,
-        backgroundColor: 'yellow',
-        transform: 'rotate3d(5, 10, 20, 30deg)'
+        opacity: 1
       })),
-      transition('initial => final', animate(1000)),
-      transition('final => initial', animate(500)),
+      transition('initial => final', animate(2000)),
+      transition('final => initial', animate(1000)),
     ])
   ]
 })
@@ -28,22 +24,16 @@ export class PlacesComponent {
   places = null
   state = 'initial'
 
-  animate(){
-    this.state = (this.state === 'final') ? 'initial' : 'final'
-  }
-  beginAnimation(event){
-    console.log('Started!')
-    console.log(event)
-  }
-  finishAnimation(event){
-    console.log('Done!')
-    console.log(event)
-  }
+  /// Este sería la función que se bindearía a un botón con un click event para lanzar una animación manual!
+  // animate(){
+  //   this.state = (this.state === 'final') ? 'initial' : 'final'
+  // }
 
   constructor(private placesService: PlacesService) {
     placesService.getPlaces()
       .valueChanges().subscribe(places => {
         this.places = places
+        this.state = 'final' // => animación automática al obtener los negocios
       })
   }
 }

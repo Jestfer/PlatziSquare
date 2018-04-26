@@ -4,12 +4,9 @@
 
 <hr>
 
-<div id="square" [@animatedContainer]="state" (@animatedContainer.start)="beginAnimation($event)" (@animatedContainer.done)="finishAnimation($event)"></div>
-<a class="btn btn-info" (click)="animate()">Animate</a>
-
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
       <h2>Nearby Places</h2>
       <a class="btn btn-primary" routerLink="/create">Add Business</a>
       <ul class="list-group">
@@ -32,8 +29,26 @@
         </ng-container>
       </ul>
     </div>
-    <div class="col-md-4">
+
+    <div class="col-md-6" [@animatedContainer]="state">
       <h2>Featured</h2>
+      <ng-container *ngFor="let place of places">
+        <div class="list-group-item list-group-item-warning padding" *ngIf="place.plan == 'Premium'">
+          <a routerLink="/detail/{{ place.id }}">
+            <h3>{{ place.name | titlecase }}</h3>
+          </a>
+          <i class="fa fa-star pull-right"></i>
+      
+          <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
+      
+          <a routerLink="/edit/{{ place.id }}">
+            <button type="button" class="btn btn-secondary edit">Edit</button>
+          </a>
+      
+          <br>
+          <p [innerHtml]="place.description | linkifystr"></p>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

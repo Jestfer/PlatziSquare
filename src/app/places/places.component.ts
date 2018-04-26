@@ -1,5 +1,5 @@
-import { Component, trigger, state, style, transition, animate } from '@angular/core';
-import { PlacesService } from '../services/places.service';
+import { Component, trigger, state, style, transition, animate } from '@angular/core'
+import { PlacesService } from '../services/places.service'
 
 @Component({
   selector: 'app-places',
@@ -17,6 +17,7 @@ import { PlacesService } from '../services/places.service';
     ])
   ]
 })
+
 export class PlacesComponent {
   title = 'PlatziSquare'
   lat: number = 51.5173403

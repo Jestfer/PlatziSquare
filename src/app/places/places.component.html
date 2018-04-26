@@ -19,8 +19,8 @@
 
             <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
 
-            <a routerLink="/edit/{{ place.id }}">
-              <button type="button" class="btn btn-secondary edit">Edit</button>
+            <a routerLink="/edit/{{ place.id }}" class="btn edit">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
 
             <br>
@@ -42,7 +42,7 @@
           <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
       
           <a routerLink="/edit/{{ place.id }}">
-            <button type="button" class="btn btn-secondary edit">Edit</button>
+            <button type="button" class="btn btn-outline-secondary edit">Edit</button>
           </a>
       
           <br>

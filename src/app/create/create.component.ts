@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { PlacesService } from '../services/places.service';
+import { Component } from '@angular/core'
+import { PlacesService } from '../services/places.service'
 
 @Component({
   selector: 'app-create',
@@ -8,10 +8,10 @@ import { PlacesService } from '../services/places.service';
 export class CreateComponent {
   place:any = {}
   done = false
-  constructor(private placesService: PlacesService){
-  }
 
-  savePlace(){
+  constructor(private placesService: PlacesService) {}
+
+  savePlace() {
     let address = this.place.street + ',' + this.place.town + ',' + this.place.country
     // We pass the address info to the service to connect to Firebase
     this.placesService.getGeoData(address) // => returns a promise! 'We subscribe to the Promise'

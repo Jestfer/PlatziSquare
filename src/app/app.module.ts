@@ -1,34 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { HttpModule } from '@angular/http'
+import { FormsModule } from '@angular/forms'
+import { NgModule } from '@angular/core'
 
-import { AppComponent } from './app.component';
-import { DetailComponent } from './detail/detail.component';
-import { PlacesComponent } from './places/places.component';
-import { ContactComponent } from './contact/contact.component';
-import { CreateComponent } from './create/create.component';
-import { EditComponent } from './edit/edit.component';
-import { LinkifystrPipe } from './pipes/linkifystr.pipe';
-import { environment } from '../environments/environment';
+import { AppComponent } from './app.component'
+import { DetailComponent } from './detail/detail.component'
+import { PlacesComponent } from './places/places.component'
+import { ContactComponent } from './contact/contact.component'
+import { CreateComponent } from './create/create.component'
+import { EditComponent } from './edit/edit.component'
+import { LinkifystrPipe } from './pipes/linkifystr.pipe'
+import { environment } from '../environments/environment'
 
-import { AgmCoreModule } from '@agm/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule } from '@agm/core'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { HighlightDirective } from './directives/highlight.directive';
-import { CountClicksDirective } from './directives/count-clicks.directive';
+import { HighlightDirective } from './directives/highlight.directive'
+import { CountClicksDirective } from './directives/count-clicks.directive'
 
-import { Routes, RouterModule } from "@angular/router";
-import { PlacesService } from './services/places.service';
+import { Routes, RouterModule } from "@angular/router"
+import { PlacesService } from './services/places.service'
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2'
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database'
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AngularFontAwesomeModule } from 'angular-font-awesome'
 
 const appRoutes: Routes = [
-  { path: '', component: PlacesComponent },
+  { path: '', redirectTo: 'places', pathMatch: 'full' },
   { path: 'places', component: PlacesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'create', component: CreateComponent },
@@ -73,4 +73,5 @@ export const firebaseConfig = {
   providers: [PlacesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}

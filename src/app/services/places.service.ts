@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { AngularFireDatabase } from "angularfire2/database";
-import { Http } from "@angular/http";
+import { Injectable } from "@angular/core"
+import { AngularFireDatabase } from "angularfire2/database"
+import { Http } from "@angular/http"
 
 @Injectable()
 
@@ -11,13 +11,16 @@ export class PlacesService {
   public getPlaces() {
     return this.afDB.list('places/') || null
   }
+
   public findPlace(id) {
     return this.afDB.object(`places/${id}`)
   }
-  public savePlace(place){
+
+  public savePlace(place) {
     this.afDB.database.ref('places/' + place.id).set(place)
   }
-  public getGeoData(address){
+
+  public getGeoData(address) {
     return this.http.get('http://maps.google.com/maps/api/geocode/json?address=' + address)
   }
 }

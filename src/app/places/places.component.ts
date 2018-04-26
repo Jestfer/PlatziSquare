@@ -1,4 +1,4 @@
-import { Component, trigger, state, style } from '@angular/core';
+import { Component, trigger, state, style, transition, animate } from '@angular/core';
 import { PlacesService } from '../services/places.service';
 
 @Component({
@@ -15,7 +15,9 @@ import { PlacesService } from '../services/places.service';
         opacity: 1,
         backgroundColor: 'yellow',
         transform: 'rotate3d(5, 10, 20, 30deg)'
-      }))
+      })),
+      transition('initial => final', animate(1000)),
+      transition('final => initial', animate(500)),
     ])
   ]
 })
@@ -24,8 +26,11 @@ export class PlacesComponent {
   lat: number = 51.5173403
   lng: number = -0.0754695
   places = null
-
   state = 'initial'
+
+  animate(){
+    this.state = (this.state === 'final') ? 'initial' : 'final'
+  }
 
   constructor(private placesService: PlacesService) {
     placesService.getPlaces()

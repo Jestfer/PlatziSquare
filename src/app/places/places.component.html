@@ -33,12 +33,12 @@
     <div class="col-md-6" [@animatedContainer]="state">
       <h2>Featured</h2>
       <ng-container *ngFor="let place of places">
-        <div class="list-group-item list-group-item-warning padding" *ngIf="place.plan == 'Premium'">
+        <div class="alert alert-warning padding" *ngIf="place.plan == 'Premium'">
           <a routerLink="/detail/{{ place.id }}">
             <h3>{{ place.name | titlecase }}</h3>
           </a>
           <i class="fa fa-star pull-right"></i>
-      
+
           <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
       
           <a routerLink="/edit/{{ place.id }}">

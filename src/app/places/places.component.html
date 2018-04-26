@@ -4,7 +4,7 @@
 
 <hr>
 
-<div id="square" [@animatedContainer]="state"></div>
+<div id="square" [@animatedContainer]="state" (@animatedContainer.start)="beginAnimation($event)" (@animatedContainer.done)="finishAnimation($event)"></div>
 <a class="btn btn-info" (click)="animate()">Animate</a>
 
 <div class="container">

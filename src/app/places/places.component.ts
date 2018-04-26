@@ -31,6 +31,14 @@ export class PlacesComponent {
   animate(){
     this.state = (this.state === 'final') ? 'initial' : 'final'
   }
+  beginAnimation(event){
+    console.log('Started!')
+    console.log(event)
+  }
+  finishAnimation(event){
+    console.log('Done!')
+    console.log(event)
+  }
 
   constructor(private placesService: PlacesService) {
     placesService.getPlaces()

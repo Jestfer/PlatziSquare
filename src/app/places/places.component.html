@@ -18,6 +18,7 @@
             <a routerLink="/detail/{{ place.id }}">
               <h3>{{ place.name | titlecase }}</h3>
             </a>
+            <i class="fa fa-star pull-right" *ngIf="place.plan == 'Premium'"></i>
 
             <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
 

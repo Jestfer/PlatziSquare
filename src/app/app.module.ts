@@ -25,6 +25,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 const appRoutes: Routes = [
   { path: '', component: PlacesComponent },
   { path: 'places', component: PlacesComponent },
@@ -65,7 +67,8 @@ export const firebaseConfig = {
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFontAwesomeModule
   ],
   providers: [PlacesService],
   bootstrap: [AppComponent]

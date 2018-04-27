@@ -5,8 +5,7 @@ import { Http } from "@angular/http"
 @Injectable()
 
 export class PlacesService {
-  constructor(private afDB: AngularFireDatabase, private http: Http){
-  }
+  constructor(private afDB: AngularFireDatabase, private http: Http){}
 
   public getPlaces() {
     return this.afDB.list('places/') || null

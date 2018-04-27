@@ -26,7 +26,7 @@ describe('PlacesService', () => {
   //   expect(service).toBeTruthy();
   // }));
 
-  it('should use PlacesService', () => {
-    expect(service).toBeTruthy();
-  });
+  // it('should use PlacesService', () => {
+  //   expect(service).toBeTruthy();
+  // });
 });

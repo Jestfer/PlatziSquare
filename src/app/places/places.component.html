@@ -40,11 +40,11 @@
           <i class="fa fa-star pull-right"></i>
 
           <small>Created: {{ place.id | date:'dd-MM-yy' }}</small>
-      
+
           <a routerLink="/edit/{{ place.id }}" class="btn edit">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
           </a>
-      
+
           <br>
           <p [innerHtml]="place.description | linkifystr"></p>
         </div>

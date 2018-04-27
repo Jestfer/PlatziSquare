@@ -22,6 +22,7 @@ import { CountClicksDirective } from './directives/count-clicks.directive'
 
 import { Routes, RouterModule } from "@angular/router"
 import { PlacesService } from './services/places.service'
+import { AuthorizationService } from './services/authorization.service'
 
 import { AngularFireModule } from 'angularfire2'
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database'
@@ -76,7 +77,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     AngularFontAwesomeModule
   ],
-  providers: [PlacesService],
+  providers: [PlacesService, AuthorizationService],
   bootstrap: [AppComponent]
 })
 

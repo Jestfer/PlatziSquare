@@ -5,7 +5,4 @@ import { Component } from '@angular/core'
   templateUrl: './login.component.html'
 })
 
-export class LoginComponent {
-  lat: number = 51.5169998
-  lng: number = -0.075566
-}
+export class LoginComponent {}

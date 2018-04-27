@@ -9,7 +9,8 @@ import { PlacesComponent } from './places/places.component'
 import { ContactComponent } from './contact/contact.component'
 import { CreateComponent } from './create/create.component'
 import { EditComponent } from './edit/edit.component'
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/login.component'
+import { RegistrationComponent } from './registration/registration.component'
 import { LinkifystrPipe } from './pipes/linkifystr.pipe'
 import { environment } from '../environments/environment'
 
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
   { path: 'create', component: CreateComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'edit/:id', component: EditComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegistrationComponent }
 ]
 
 export const firebaseConfig = {
@@ -57,7 +59,8 @@ export const firebaseConfig = {
     CreateComponent,
     EditComponent,
     LinkifystrPipe,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

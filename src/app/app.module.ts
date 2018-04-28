@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { HttpModule } from '@angular/http'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
@@ -76,7 +76,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [PlacesService, AuthorizationService, GuardService],
   bootstrap: [AppComponent]

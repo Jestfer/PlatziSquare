@@ -2,6 +2,8 @@ import { Component } from '@angular/core'
 import { PlacesService } from '../services/places.service'
 import 'rxjs/Rx'
 import { Observable } from 'rxjs'
+import { FormControl } from '@angular/forms'
+import { Http } from '@angular/http'
 
 @Component({
   selector: 'app-create',
@@ -10,8 +12,19 @@ import { Observable } from 'rxjs'
 export class CreateComponent {
   place: any = {}
   done = false
+  
+  // Observable string, nos mandará Google los datos...
+  results$: Observable<any>
+  private searchField: FormControl
 
-  constructor(private placesService: PlacesService) {}
+  constructor(private placesService: PlacesService, private http: Http) {
+    const URL = 'http://maps.google.com/maps/api/geocode/json'
+    this.searchField = new FormControl()
+    this.results$ = this.searchField.valueChanges // => Observamos los cambios en un string
+      .switchMap(query => this.http.get(`${URL}?address=${query}`))
+      .map(response => response.json())
+      .map(response => response.results)
+  }
 
   savePlace() {
     let address = this.place.street + ',' + this.place.town + ',' + this.place.country

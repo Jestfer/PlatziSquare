@@ -37,6 +37,15 @@
       <h3>Address</h3>
       <br>
       
+      <div class="card card-body bg-light">
+        <form action="">
+          <h3>Search Address on Google Maps</h3>
+          <input [formControl]="searchField" class="form-control">
+        </form>
+      </div>
+
+      <br>
+
       <label>Street and Number</label>
       <input type="text" class="form-control" [(ngModel)]="place.street">
       <br>

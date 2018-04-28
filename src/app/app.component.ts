@@ -15,7 +15,7 @@ export class AppComponent {
       .subscribe((result) => {
         if (result && result.uid) {
           this.loggedIn = true
-          this.currentUserMail = authorizationService.userEmail()
+          this.currentUserMail = authorizationService.getUserInfo()
         } else {
           this.loggedIn = false
         }

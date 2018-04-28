@@ -53,7 +53,7 @@ export class AuthorizationService {
     alert('You logged out!')
   }
 
-  public userEmail() {
+  public getUserInfo() {
     return this.angularFireAuth.auth.currentUser.email
   }
 }

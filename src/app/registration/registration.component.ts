@@ -7,7 +7,11 @@ import { AuthorizationService } from '../services/authorization.service';
 })
 
 export class RegistrationComponent {
-  constructor(private authorizationService: AuthorizationService) {
-    this.authorizationService.signUp('email', 'password')
+  registration: any = {}
+
+  constructor(private authorizationService: AuthorizationService) {}
+
+  signUp(){    
+    this.authorizationService.signUp(this.registration.email, this.registration.password)
   }
 }

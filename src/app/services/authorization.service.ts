@@ -52,4 +52,9 @@ export class AuthorizationService {
     this.angularFireAuth.auth.signOut()
     alert('You logged out!')
   }
+
+  public userEmail() {
+    console.log(this.angularFireAuth.auth.currentUser.email);
+    return this.angularFireAuth.auth.currentUser.email
+  }
 }

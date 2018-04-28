@@ -28,6 +28,9 @@
     </ul>
 
     <ul class="navbar-nav ml-md-auto" *ngIf="loggedIn">
+      <li class="nav-item mr-3">
+        <h3 [ngStyle]="{'color':'gray'}">{{ currentUserMail }}</h3>
+      </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/places" (click)="logout()">Logout</a>
       </li>

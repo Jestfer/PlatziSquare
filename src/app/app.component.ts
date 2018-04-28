@@ -8,12 +8,14 @@ import { AuthorizationService } from './services/authorization.service'
 })
 export class AppComponent {
   loggedIn = false
+  currentUserMail: string;
 
   constructor(private authorizationService: AuthorizationService) {
     this.authorizationService.isLogged()
       .subscribe((result) => {
         if (result && result.uid) {
           this.loggedIn = true
+          this.currentUserMail = authorizationService.userEmail()
         } else {
           this.loggedIn = false
         }

@@ -14,4 +14,7 @@ export class LoginComponent {
   login() {
     this.authorizationService.login(this.loginData.email, this.loginData.password)
   }
+  facebookLogin() {
+    this.authorizationService.facebookLogin()
+  }
 }

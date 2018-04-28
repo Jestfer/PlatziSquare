@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { AuthorizationService } from '../services/authorization.service';
+import { AuthorizationService } from '../services/authorization.service'
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ export class LoginComponent {
 
   constructor(private authorizationService: AuthorizationService) {}
 
-  login(){
+  login() {
     this.authorizationService.login(this.loginData.email, this.loginData.password)
   }
 }

@@ -1,20 +1,22 @@
-import { Injectable } from "@angular/core";
-import { AngularFireAuth } from "angularfire2/auth";
+import { Injectable } from "@angular/core"
+import { AngularFireAuth } from "angularfire2/auth"
 
 @Injectable()
 
 export class AuthorizationService {
-  constructor(private angularFireAuth: AngularFireAuth) {}
+  constructor(private angularFireAuth: AngularFireAuth) {
+    this.isLogged()
+  }
 
   public login = (email, password) => {
     this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
       .then((response) => {
         alert('You are now logged in!')
-        console.log(response);
+        console.log(response)
       })
       .catch((error) => {
         alert('Error')
-        console.log(error);
+        console.log(error)
       })
   }
 
@@ -22,11 +24,15 @@ export class AuthorizationService {
     this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
       .then((response) => {
         alert('User registered successfully!')
-        console.log(response);
+        console.log(response)
       })
       .catch((error) => {
         alert('Error')
-        console.log(error);
+        console.log(error)
       })
+  }
+
+  public isLogged() {
+    return this.angularFireAuth.authState
   }
 }

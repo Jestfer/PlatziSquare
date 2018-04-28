@@ -26,6 +26,12 @@
         <a class="nav-link" routerLink="/register">Sign Up</a>
       </li>
     </ul>
+
+    <ul class="navbar-nav ml-md-auto" *ngIf="loggedIn">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/places" (click)="logout()">Logout</a>
+      </li>
+    </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>

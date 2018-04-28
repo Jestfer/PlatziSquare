@@ -47,4 +47,9 @@ export class AuthorizationService {
   public isLogged() {
     return this.angularFireAuth.authState
   }
+
+  public logout() {
+    this.angularFireAuth.auth.signOut()
+    alert('You logged out!')
+  }
 }

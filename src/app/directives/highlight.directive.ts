@@ -6,7 +6,7 @@ import { Directive, OnInit, ElementRef, Renderer2, Input } from "@angular/core"
 
 export class HighlightDirective implements OnInit {
   constructor(private elRef: ElementRef, private renderer: Renderer2){}
-  @Input('highlight') plan: string = ''
+  @Input('highlight') plan: string
 
   ngOnInit() {
     if(this.plan === 'premium') {

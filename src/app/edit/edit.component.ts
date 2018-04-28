@@ -9,10 +9,10 @@ import { PlacesService } from '../services/places.service'
 
 export class EditComponent {
   id = null
-  place:any = {}
+  place: any = {}
   done = false
 
-  constructor(private route: ActivatedRoute, private placesService: PlacesService){
+  constructor(private route: ActivatedRoute, private placesService: PlacesService) {
     this.id = this.route.snapshot.params['id']
     this.place = this.placesService.findPlace(this.id)
       .valueChanges().subscribe(place => {

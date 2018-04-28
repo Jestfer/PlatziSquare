@@ -8,7 +8,7 @@ import { AuthorizationService } from './services/authorization.service'
 })
 export class AppComponent {
   loggedIn = false
-  currentUserMail: string;
+  currentUserMail: string
 
   constructor(private authorizationService: AuthorizationService) {
     this.authorizationService.isLogged()

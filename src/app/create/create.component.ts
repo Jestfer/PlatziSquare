@@ -6,7 +6,7 @@ import { PlacesService } from '../services/places.service'
   templateUrl: './create.component.html'
 })
 export class CreateComponent {
-  place:any = {}
+  place: any = {}
   done = false
 
   constructor(private placesService: PlacesService) {}

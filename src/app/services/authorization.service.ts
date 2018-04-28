@@ -54,7 +54,6 @@ export class AuthorizationService {
   }
 
   public userEmail() {
-    console.log(this.angularFireAuth.auth.currentUser.email);
     return this.angularFireAuth.auth.currentUser.email
   }
 }

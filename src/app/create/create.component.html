@@ -39,9 +39,15 @@
       
       <div class="card card-body bg-light">
         <form action="">
-          <h3>Search Address on Google Maps</h3>
-          <input [formControl]="searchField" class="form-control">
+          <label>Search Address on Google Maps</label>
+          <input type="text" [formControl]="searchField" class="form-control">
         </form>
+
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let result of results$ | async">
+            {{ result.formatted_address }}
+          </li>
+        </ul>
       </div>
 
       <br>

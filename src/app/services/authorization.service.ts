@@ -7,7 +7,15 @@ export class AuthorizationService {
   constructor(private angularFireAuth: AngularFireAuth) {}
 
   public login = (email, password) => {
-    console.log('Login function!');
+    this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
+      .then((response) => {
+        alert('You are now logged in!')
+        console.log(response);
+      })
+      .catch((error) => {
+        alert('Error')
+        console.log(error);
+      })
   }
 
   public signUp = (email, password) => {

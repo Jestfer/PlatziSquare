@@ -7,7 +7,11 @@ import { AuthorizationService } from '../services/authorization.service';
 })
 
 export class LoginComponent {
-  constructor(private authorizationService: AuthorizationService) {
-    this.authorizationService.login('email', 'password')
+  loginData: any = {}
+
+  constructor(private authorizationService: AuthorizationService) {}
+
+  login(){
+    this.authorizationService.login(this.loginData.email, this.loginData.password)
   }
 }

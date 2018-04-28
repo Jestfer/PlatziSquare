@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 offset-4 col-md-4">
-      <div class="card card-body bg-light mt-5"> 
+      <form class="card card-body bg-light mt-5"> 
         <label>Email</label>
-        <input type="email" class="form-control">
+        <input type="email" autocomplete="username" class="form-control" [(ngModel)]="loginData.email" [ngModelOptions]="{standalone: true}">
         <br>
 
         <label>Password</label>
-        <input type="password" class="form-control">
+        <input type="password" autocomplete="current-password" class="form-control" [(ngModel)]="loginData.password" [ngModelOptions]="{standalone: true}">
 
         <hr>
 
-        <a class="btn btn-primary btn-block">Login!</a>
-        <a class="btn btn-secondary btn-block">Cancel</a>
-      </div>
+        <a class="btn btn-primary btn-block" (click)="login()">Login!</a>
+        <a routerLink="" class="btn btn-secondary btn-block">Cancel</a>
+      </form>
     </div>
   </div>
 </div>

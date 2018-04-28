@@ -23,6 +23,7 @@ import { CountClicksDirective } from './directives/count-clicks.directive'
 import { Routes, RouterModule } from "@angular/router"
 import { PlacesService } from './services/places.service'
 import { AuthorizationService } from './services/authorization.service'
+import { GuardService } from './services/guard.service'
 
 import { AngularFireModule } from 'angularfire2'
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database'
@@ -34,9 +35,9 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'places', pathMatch: 'full' },
   { path: 'places', component: PlacesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'create', component: CreateComponent },
+  { path: 'create', component: CreateComponent, canActivate: [GuardService] },
   { path: 'detail/:id', component: DetailComponent },
-  { path: 'edit/:id', component: EditComponent },
+  { path: 'edit/:id', component: EditComponent, canActivate: [GuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent }
 ]
@@ -77,7 +78,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     AngularFontAwesomeModule
   ],
-  providers: [PlacesService, AuthorizationService],
+  providers: [PlacesService, AuthorizationService, GuardService],
   bootstrap: [AppComponent]
 })
 
